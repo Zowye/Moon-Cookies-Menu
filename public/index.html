@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Moon Cookies</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <div id="cart_container">
+        <script src="js/script.js"></script>
+        <img id="remove" src="images/remove_icon.svg" onclick="erase_itens()">
+        <div id="cart" onclick="send_handle()">
+            <img src="images/wpp.png">
+            <div id="counter"></div>
+
+        </div>
+    </div>
+
+    <div class="header">
+        <img class="logomoon" src="images/logomoon.png" />
+    </div>
+
+    <div class="container">
+        <div class="card" onclick="increment('brownie', 10)">
+            <div class="imgBx">
+                <img src="images/brownie.png" />
+            </div>
+            <h2>BROWNIE</h2>
+            <div class="description">Massa com cacau 100% recheado de gotas de chocolate meio amargo e nozes picadas.</div>
+            <div class="price">
+                R$ 10
+            </div>
+        </div>
+
+
+        <div class="card" onclick="increment('redvelvet', 11)">
+            <div class="imgBx">
+                <img src="images/redvelvet.png" />
+            </div>
+            <h2>RED VELVET</h2>
+            <div class="description">Massa com cacau 100% recheado de gotas de chocolate meio amargo e nozes picadas.</div>
+            <div class="price">
+                R$ 11
+            </div>
+        </div>
+
+
+
+        <div class="card" onclick="increment('mms', 11)">
+            <div class="imgBx">
+                <img src="images/mms.png" />
+            </div>
+            <h2>M&Ms</h2>
+            <div class="description">Massa com cacau 100% recheado de gotas de chocolate meio amargo e nozes picadas.</div>
+            <div class="price">
+                R$ 11
+            </div>
+
+        </div>
+
+
+
+
+        <div class="card" onclick="increment('nozes', 10)">
+            <div class="imgBx">
+                <img src="images/nozes.png" />
+            </div>
+            <h2>NOZES</h2>
+            <div class="description">Massa com cacau 100% recheado de gotas de chocolate meio amargo e nozes picadas.</div>
+            <div class="price">
+                R$ 10
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="card" onclick="increment('nutella', 12)">
+            <div class="imgBx">
+                <img src="images/nutella.png" />
+            </div>
+            <h2>NUTELLA</h2>
+            <div class="description">Massa com cacau 100% recheado de gotas de chocolate meio amargo e nozes picadas.</div>
+            <div class="price">
+                R$ 12
+            </div>
+
+        </div>
+
+
+        <div class="card" onclick="increment('dark', 12)">
+            <div class="imgBx">
+                <img src="images/dark.png" />
+            </div>
+            <h2>DARK</h2>
+            <div class="description">Massa com cacau 100% recheado de gotas de chocolate meio amargo e nozes picadas.</div>
+            <div class="price">
+                R$ 12
+            </div>
+
+        </div>
+
+
+        <div class="card" onclick="increment('tradicional', 12)">
+            <div class="imgBx">
+                <img src="images/tradicional.png" />
+            </div>
+            <h2>TRADICIONAL</h2>
+            <div class="description">Massa com cacau 100% recheado de gotas de chocolate meio amargo e nozes picadas.</div>
+            <div class="price">
+                R$ 12
+            </div>
+
+        </div>
+
+
+        <div class="card smaller_text" onclick="increment('cacau_brigadeiro', 12)">
+            <div class="imgBx">
+                <img src="images/cacau_brigadeiro.png" />
+            </div>
+            <h2>CACAU COM BRIGADEIRO</h2>
+            <div class="description">Massa com cacau 100% recheado de gotas de chocolate meio amargo e nozes picadas.</div>
+            <div class="price">
+                R$ 12
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="bg"></div>
+
+    <div class="star-field">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+
+        <script>
+            // only after the objects are already generated
+            document.getElementById("counter").innerHTML = `R$ 0,00`;
+            document.getElementById("remove").style.visibility = "hidden";
+        </script>
+</body>

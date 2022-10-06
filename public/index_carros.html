@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    * {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        padding: 1px 1px 1px 1px;
+    }
+    
+    body {
+        background-color: blueviolet
+    }
+    
+    #trocacorporra {
+        font-size: larger;
+    }
+</style>
+
+
+
+<body>
+    <select name="sel" id="veiculo">
+        <option value="gol"> gol </option>
+        <option value="uno"> uno </option>
+        <option value="parati"> parati </option>
+        <option value="corsa"> corsa </option>
+    </select>
+
+    <button onclick="pegamodelo()">selecionar veiculo</button>
+    <div id="trocacorporra">
+        <p id="muda">?????????????</p>
+    </div>
+
+
+
+    <script>
+        var texto;
+
+        function pegamodelo() {
+            var carro = document.getElementById('veiculo');
+            var modelo = carro.options[carro.selectedIndex].value;
+
+            if (modelo == 'gol') {
+                texto = "parabens esse é o carro do brazil!";
+                document.getElementById('trocacorporra').style.backgroundColor = 'green';
+            } else if (modelo == 'uno') {
+                texto = "muito bom!, se colocar uma escada fica top, cuidado nas curvas!";
+                document.getElementById('trocacorporra').style.backgroundColor = 'grey';
+            } else if (modelo == 'parati') {
+                texto = "carai cuzao, boa sorte";
+                document.getElementById('trocacorporra').style.backgroundColor = 'yellow';
+            } else if (modelo == 'corsa') {
+                texto = "saporra não é um carro";
+                document.getElementById('trocacorporra').style.backgroundColor = 'red';
+            }
+
+            document.getElementById('muda').innerHTML = texto;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>
+        Olá Daniel, use essa área para testar seus códigos!
+    </h2>
+
+    <h1>HELLO FUCKING WORLD!!</h1>
+
+    <p>SOMA:</p>
+    <p id="sum_all"> </p>
+    <script>
+        var arr = [];
+
+        valor = 0;
+
+        while (valor != -1) {
+            valor = parseInt(prompt("Insira um valor: Insira -1 para finalizar e somar tudo!"));
+            arr.push(valor);
+        }
+
+        sum_all = arr.reduce((partialSum, a) => partialSum + a, 1);
+        document.getElementById("sum_all").innerHTML = sum_all;
+    </script>
+</body>
+
+</html>

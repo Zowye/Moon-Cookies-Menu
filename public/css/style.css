@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handlee&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+#cart {
+    display: inline-block;
+    font-size: 2vh;
+    color: white;
+    height: 5vh;
+    top: 1em;
+    right: 1em;
+    padding: 0.5vh;
+    padding-left: 1.5vh;
+    border-radius: 1vh;
+    padding-right: 1.5vh;
+    background-color: rgba(33, 96, 57, 0.75);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#counter {
+    float: right;
+}
+
+#cart_container {
+    display: inline-block;
+    float: right;
+    position: fixed;
+    top: 1em;
+    z-index: 1000;
+    right: 1em;
+}
+
+#remove {
+    position: absolute;
+    z-index: 1001;
+    float: left;
+    left: -3vw;
+    align-items: center;
+    height: 3vh;
+    cursor: pointer;
+}
+
+#cart img {
+    position: relative;
+    top: 1vh;
+    align-items: center;
+    margin-right: 1vw;
+    width: 2vh;
+    height: 2vh;
+    float: left;
+}
+
+.header {
+    display: flex;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    align-items: center;
+    margin-bottom: 2vh;
+    justify-content: center;
+}
+
+.header h1 {
+    margin-top: -30px;
+    font-family: 'Handlee', cursive;
+    font-size: 200px;
+}
+
+.header h2 {
+    font-family: 'Handlee', cursive;
+    font-size: 30px;
+}
+
+.logomoon {
+    position: relative;
+    width: 220px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+body {
+    background: linear-gradient(-45deg, #0b63bb, black);
+    background-size: 400% 400%;
+    /* animation: gradient 15s ease infinite; */
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 150px;
+    padding-left: 25px;
+    transition: 0.5s;
+    overflow: hidden;
+    transition-timing-function: cubic-bezier(0.9, 0.3, 0.25, 1);
+    cursor: pointer;
+}
+
+.card .text {
+    float: left;
+    display: flex;
+}
+
+.smaller_text h2 {
+    font-size: 35px;
+}
+
+.card:hover {
+    /* height: 250px; */
+}
+
+.card:hover .imgBx {
+    height: 130px;
+    width: 130px;
+    -webkit-filter: none !important;
+    filter: none !important;
+}
+
+h2 {
+    font-size: 64px;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.imgBx {
+    position: absolute;
+    right: 80px;
+    top: -10px;
+    transform: translateX(80%);
+    height: 230px;
+    width: 230px;
+    filter: grayscale(0.100) blur(10px) opacity(80%);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.price {
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    display: flex;
+    padding: 5px 22px 5px 22px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 45px 80px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+.description {
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+    width: 80%;
+}
+
+.card .hidden_content {
+    font-family: 'Handlee', cursive;
+    font-size: 40px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.card .hidden_content ul {
+    list-style-type: none;
+}
+
+.card .hidden_content li {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(188, 188, 188);
+    color: white;
+    padding: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.10);
+    border-radius: 11px;
+    font-size: 12px;
+}
+
+.imgBx img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+
+/* ______________________________________________________ Animations */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (orientation: portrait) {
+    .card {
+        position: relative;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        margin-left: 4vw;
+        margin-right: 4vw;
+        margin-bottom: 3vh;
+        padding: 10px;
+        padding-top: 3vh;
+        padding-bottom: 150px;
+        display: table;
+        padding-left: 10vw;
+        transition: 0.5s;
+        transition-timing-function: cubic-bezier(0.9, 0.3, 0.25, 1);
+    }
+    .card .text {
+        float: left;
+        display: flex;
+    }
+    .smaller_text h2 {
+        font-size: 6em;
+    }
+    .card:hover {
+        /* height: 250px; */
+    }
+    .card:hover .imgBx {
+        height: 15vh;
+        width: 15vh;
+        -webkit-filter: none !important;
+        filter: none !important;
+    }
+    h2 {
+        font-size: 8em;
+        font-family: 'Bebas Neue', cursive;
+        color: white;
+    }
+    .card .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    .imgBx {
+        position: absolute;
+        right: 80px;
+        top: -10px;
+        transform: translateX(80%);
+        height: 25vh;
+        width: 25vh;
+        filter: grayscale(0.100) blur(10px) opacity(80%);
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    .description {
+        font-family: 'Handlee', cursive;
+        font-size: 3em;
+        width: 60%;
+    }
+    .price {
+        position: absolute;
+        right: -5px;
+        bottom: -5px;
+        display: flex;
+        padding: 5px 22px 5px 22px;
+        background-color: black;
+        justify-content: center;
+        z-index: 2;
+        font-size: 4em;
+        align-items: center;
+        color: #fff;
+        box-shadow: 0 45px 80px rgba(0, 0, 0, 0.35);
+        border-radius: 10px;
+    }
+    .logomoon {
+        position: relative;
+        width: 80%;
+    }
+}
+
+
+/* .bg {
+    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+} */
+
+.bg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.30;
+}
+
+@keyframes sf-fly-by-1 {
+    0% {
+        transform: translateZ(-100vh);
+        opacity: 0.0;
+    }
+    100% {
+        transform: translateZ(100vh);
+        opacity: 1.0;
+    }
+}
+
+.star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 600px;
+    -webkit-perspective: 600px;
+    z-index: -1;
+}
+
+.star-field .layer {
+    box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc, -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7, 758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke, 183px 389px #c7c7c7, 524px -237px #f0f0f0, 679px -535px #e3e3e3, 158px 399px #ededed, 157px 249px #ededed, 81px -450px #ebebeb, 719px -360px #c2c2c2, -499px 473px #e8e8e8, -158px -349px #d4d4d4, 870px -134px #cfcfcf, 446px 404px #c2c2c2, 440px 490px #d4d4d4, 414px 507px #e6e6e6, -12px 246px #fcfcfc, -384px 369px #e3e3e3, 641px -413px #fcfcfc, 822px 516px #dbdbdb, 449px 132px #c2c2c2, 727px 146px #f7f7f7, -315px -488px #e6e6e6, 952px -70px #e3e3e3, -869px -29px #dbdbdb, 502px 80px #dedede, 764px 342px #e0e0e0, -150px -380px #dbdbdb, 654px -426px #e3e3e3, -325px -263px #c2c2c2, 755px -447px #c7c7c7, 729px -177px #c2c2c2, -682px -391px #e6e6e6, 554px -176px #ededed, -85px -428px #d9d9d9, 714px 55px #e8e8e8, 359px -285px #cfcfcf, -362px -508px #dedede, 468px -265px #fcfcfc, 74px -500px #c7c7c7, -514px 383px #dbdbdb, 730px -92px #cfcfcf, -112px 287px #c9c9c9, -853px 79px #d6d6d6, 828px 475px #d6d6d6, -681px 13px #fafafa, -176px 209px #f0f0f0, 758px 457px #fafafa, -383px -454px #ededed, 813px 179px #d1d1d1, 608px 98px whitesmoke, -860px -65px #c4c4c4, -572px 272px #f7f7f7, 459px 533px #fcfcfc, 624px -481px #e6e6e6, 790px 477px #dedede, 731px -403px #ededed, 70px -534px #cccccc, -23px 510px #cfcfcf, -652px -237px whitesmoke, -690px 367px #d1d1d1, 810px 536px #d1d1d1, 774px 293px #c9c9c9, -362px 97px #c2c2c2, 563px 47px #dedede, 313px 475px #e0e0e0, 839px -491px #e3e3e3, -217px 377px #d4d4d4, -581px 239px #c2c2c2, -857px 72px #cccccc, -23px 340px #dedede, -837px 246px white, 170px -502px #cfcfcf, 822px -443px #e0e0e0, 795px 497px #e0e0e0, -814px -337px #cfcfcf, 206px -339px #f2f2f2, -779px 108px #e6e6e6, 808px 2px #d4d4d4, 665px 41px #d4d4d4, -564px 64px #cccccc, -380px 74px #cfcfcf, -369px -60px #f7f7f7, 47px -495px #e3e3e3, -383px 368px #f7f7f7, 419px 288px #d1d1d1, -598px -50px #c2c2c2, -833px 187px #c4c4c4, 378px 325px whitesmoke, -703px 375px #d6d6d6, 392px 520px #d9d9d9, -492px -60px #c4c4c4, 759px 288px #ebebeb, 98px -412px #c4c4c4, -911px -277px #c9c9c9;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+}
+
+.star-field .layer:nth-child(1) {
+    animation: sf-fly-by-1 6s linear infinite;
+}
+
+.star-field .layer:nth-child(2) {
+    animation: sf-fly-by-1 6s linear infinite;
+    animation-delay: 1s;
+}
+
+.star-field .layer:nth-child(3) {
+    animation: sf-fly-by-1 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.star-field .layer:nth-child(4) {
+    animation: sf-fly-by-1 6s linear infinite;
+    animation-delay: 3s;
+}
+
+.star-field .layer:nth-child(5) {
+    animation: sf-fly-by-1 6s linear infinite;
+    animation-delay: 4s;
+}
+
+.star-field .layer:nth-child(6) {
+    animation: sf-fly-by-1 6s linear infinite;
+    animation-delay: 5s;
+}
